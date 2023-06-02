@@ -1,0 +1,9 @@
+mutation CreateTodo($title: String!, $description: String!, $is_completed:Boolean!,$user_id:uuid!){
+ insert_todos_one(object: {title:$title, description:$description, is_completed:$is_completed,user_id:$user_id}){
+    id
+    title
+    description
+    is_completed
+    user_id
+  }
+}

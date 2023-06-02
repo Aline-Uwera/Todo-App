@@ -1,0 +1,9 @@
+mutation ClearCompleted {
+  delete_todos(where: { is_completed: { _eq: true } }){
+    returning{
+    id
+    title
+    description
+    }
+  }
+}

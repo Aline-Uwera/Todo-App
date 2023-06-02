@@ -1,0 +1,6 @@
+query GetProfile($userEmail: String!) {
+  profiles(where: { email: { _eq: $userEmail } }) {
+    id
+    email
+  }
+}

@@ -1,0 +1,17 @@
+query GetCompletedTodo($userId: uuid!) {
+  todos(where: { user_id: { _eq: $userId }, is_completed: { _eq: true } }) {
+    id
+    title
+    description
+    is_completed
+  }
+}
+
+# query GetAllTodos{
+#   todos(where: { user_id: { _eq: $userId } }) {
+#     id
+#     title
+#     is_completed
+#     description
+#   }
+# }

@@ -1,0 +1,20 @@
+mutation UpdateTodo(
+  $id: uuid!
+  $description: String!
+  $is_completed: Boolean!
+  $title: String!
+) {
+  update_todos_by_pk(
+    pk_columns: { id: $id }
+    _set: {
+      description: $description
+      is_completed: $is_completed
+      title: $title
+    }
+  ) {
+    id
+    description
+    is_completed
+    title
+  }
+}

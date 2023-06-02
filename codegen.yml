@@ -1,0 +1,14 @@
+overwrite: true
+schema: https://exotic-wolf-11.hasura.app/v1/graphql
+headers:
+  x-hasura-admin-secret: U6C9nxDUBy44QkHE791oaEdhvccYsLoyIqNLAmBZxkrYk8YPUPvnP1LkU6O9ZMUm
+documents: "graphql/*.graphql"
+generates:
+  ./src/generated/graphql.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-query
+    config: 
+      fetcher: 'graphql-request'
+      

@@ -1,0 +1,8 @@
+query GetActiveTodo($userId: uuid!)  {
+  todos(where: { user_id: { _eq: $userId }, is_completed: { _eq: false } }) {
+    id
+    title
+    description
+    is_completed
+  }
+}

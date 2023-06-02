@@ -1,0 +1,7 @@
+mutation InsertProfile($id:uuid!, $name:String!, $email:String!, $password: String!) {
+  insert_profiles_one(object: {id: $id, name: $name, email: $email, password:$password}) {
+    name
+    email
+    password
+  }
+}

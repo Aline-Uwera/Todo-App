@@ -1,0 +1,8 @@
+query GetAllTodos($userId: uuid!) {
+  todos(where: { user_id: { _eq: $userId } }) {
+    id
+    title
+    is_completed
+    description
+  }
+}

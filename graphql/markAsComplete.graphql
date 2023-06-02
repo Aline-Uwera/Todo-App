@@ -1,0 +1,7 @@
+mutation MarkAsComplete($id: uuid!,$is_completed: Boolean) {
+  update_todos_by_pk(pk_columns: { id: $id }, _set: {is_completed: $is_completed }) {
+    title
+    description
+    is_completed
+  }
+}
